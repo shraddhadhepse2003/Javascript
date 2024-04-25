@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body id="b">
+    <script>
+        var arr=['red','yellow','blue','green','black']
+        var i=0
+        function pract()
+        {
+           var b=document.getElementById('b')
+           b.style.backgroundColor= arr[i]
+           i++
+           if(arr.length<=i){
+            i=0
+           }
+        }
+    </script>
+    <button onclick="pract()">Click Here</button>
+    <a href=""><button>refresh</button></a>
+</body>
+</html>

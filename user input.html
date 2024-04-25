@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user input</title>
+</head>
+<body id="b">
+    <h1 id="h1">Hello</h1>
+    <script>
+        function pract()
+        {
+           var a= document.getElementById('h1')
+           //a.innerHTML="Heyyyyyyyyy"
+           a.innerHTML="<img src='images/pic1.avif' width=300px/> "
+           a.style.color='red'
+
+           var b=document.getElementById('b')
+           
+           b.style.backgroundColor='purple'
+        }
+    </script>
+    <button onclick="pract()">Click Here</button>
+    <a href=""><button>refresh</button></a>
+</body>
+</html>
