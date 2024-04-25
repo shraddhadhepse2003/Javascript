@@ -23,7 +23,33 @@
         b['name']='SHRADDHA'
         b.age=666
         b.state="MH"
-        document.write(b['name'],'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp',b.age)
+        document.write(b['name'],'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp',b.age,"<br>")
+
+
+        c=[0,1,[{data:['A1','A2','A3']}]]
+        //console.log(c[2][0].data[1])
+        document.write(c[2][0].data[1],"<br>")
+        console.log(c)
+        d=c[2][0]['data'][1]
+        document.write(d,"<br>")
+
+        e=[{'data':'xyz'}]
+        document.write(e[0]['data'])
+
+        e=[{'data':['xyz']}]
+        document.write(e[0]['data'][0],"<br>")
+
+        f={data1:'xyz',data2:{data3:[{'name':'ITV','name2':{age:[11,22]}}]}}
+        g=f['data2']['data3'][0]['name2']['age'][1]
+        document.write(g,"<br>")
+
+        /*car = {"color": "red","type": "cabrio","capacity": 2}
+        document.write(car.color,car.type,car.capacity)*/
+
+        j={data1:'ghf',data2:{data3:{data4:[{'name':'ITV','name2':{age:[11,22]}},'A1','A2']}}}
+        l=j['data2']['data3']['data4'][0]['name2']['age'][0]
+        l=j['data2']['data3']['data4'][2]
+        document.write(l)
 
     </script>
 </body>
