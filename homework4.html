@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        function mouse(){
+            Name=document.getElementById('name').value
+            Contact=document.getElementById('contact').value
+            Age=document.getElementById('age').value
+
+            button=document.getElementById('btn')
+            if(Name=="" || Name==null || Age=="" || Age==null)
+            {
+                button.style.float="right"
+            }
+            else{
+                button.style.float="left"
+            }
+        }
+        function display(){
+            button.style.float="left"
+        }
+    </script>
+    <form>
+        Name:<input type="text" id="name"/><br><br>
+        Contact No:<input type="text" id="contact"/><br><br>
+        Age:<input type="text" id="age"/><br><br>
+
+    </form>
+    <button id="btn" onmouseover="mouse()" onmouseout="display()">Submit</button>
+</body>
+</html>
