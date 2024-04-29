@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="b" style="background-color: darkorchid;">
+    <h1 id='h1'>Hello</h1>
+    
+    <script>
+        var arr1=['red','yellow','blue','green','orange']
+        var arr=['Heyyyyyyy','Hiiii','Good morning','Good night','byebye']
+        var i=0
+        var p=0
+        function prac(){
+            var a=document.getElementById('h1')
+            a.innerHTML=arr[i]
+            i++
+            if(arr.length<=i){
+                i=0
+            }
+
+            var b=document.getElementById('b')
+            b.style.backgroundColor=arr1[p]
+            p++
+            if(arr.length<=p){
+                p=0
+            }
+            
+
+        }
+    </script>
+    <button onclick="prac()">Click</button>
+    <a href=""><button>refresh</button></a>
+</body>
+</html>

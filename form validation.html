@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function Data(){
+        fname=document.getElementById('fname1').value
+        age=document.getElementById('age1').value
+        contact=document.getElementById('contact1').value
+        //console.log(typeof(age))
+
+        if(fname=="" || fname== null){
+            alert("fname required")
+        }
+        else if(age=="" || age==null ){
+            alert("age also required.....age cannot be a negative")
+        }
+        else if(contact=="" || contact.length!=10)
+        {
+            alert("contact must not be empty and should be 10 digit")
+        }
+        document.getElementById('f').innerHTML=fname
+        document.getElementById('a').innerHTML=age
+        document.getElementById('c').innerHTML=contact
+     }
+     
+    </script>
+
+
+    <h1>FirstName:<span id="f"></span></h1>
+    <h1>Age:<span id="a"></span></h1>
+    <h1>Contact:<span id="c"></span></h1>
+    <form name="fm">
+           fname:<input type="text" name="fname" id="fname1"/>
+           age:<input type="number" name="age" id="age1"/>
+           contact:<input type="tel" name="contact" id="contact1" />
+    </form>
+    <input type="submit" onclick="Data()"/>
+</body>
+</html>
