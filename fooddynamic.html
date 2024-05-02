@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,th{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="FoodList('veg')">Veg</button>
+    <button onclick="FoodList('non veg')">Non veg</button>
+    <table width="400" id="tb">
+       <tr>
+        <th>Sr</th>
+        <th>Food-Name</th>
+        <th>Quantity-full-price</th>
+        <th>Quantity-half-price</th>
+        <th>Image</th>
+       </tr>
+       <tbody id="fooddata">
+
+       </tbody>
+
+    </table>
+
+    <script>
+        food=""
+        food1=""
+        function FoodList(type){
+            dataveg=[[1,'palak panner',200,180,'images/palakpaneer.webp'],
+            [2,'veg kolhapuri',250,140,'images/vegkolhapuri.jpg'],
+            [3,'panner tikka',300,180,'images/paneertikka.jpg']]
+
+            datanonveg=[[1,'chicken tikka',500,300,'images/chickentikka.jpg'],
+                        [2,'chicken lababdar',300,180,'images/chickenlab.jpg']]
+
+
+            if(type=='veg'){
+                for(i=0;i<dataveg.length;i++){
+                    food += "<tr>"
+                        for(j=0;j<dataveg[i].length;j++){
+                            if(j==4){
+                                food+=`<td><img src='${dataveg[i][j]}' width='50px' height='50px'/></td>`
+                            }
+                            else{
+                                food+=`<td>${dataveg[i][j]}</td>`
+                            }
+                        }
+                        food +="</tr>"
+                }
+              document.getElementById('fooddata').innerHTML=food
+              document.getElementById('tb').style.display='block';
+                }
+
+
+           
+            else if(type=='non veg'){
+                for(i=0;i<datanonveg.length;i++){
+                    food1+= "<tr>"
+                        for(j=0;j<datanonveg[i].length;j++){
+                            if(j==4){
+                                food1+=`<td><img src='${datanonveg[i][j]}' width='50px' height='50px'/></td>`
+                            }
+                            else{
+                                food1+=`<td>${datanonveg[i][j]}</td>`
+                            }
+                        }
+                        food1 +="</tr>"
+                }
+                document.getElementById('fooddata').innerHTML=food1
+                document.getElementById('tb').style.display='block';
+               }
+            }
+        
+    </script>
+</body>
+</html>

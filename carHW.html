@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            width:400px;
+        }
+        table{
+            display: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <button onclick="car('Honda')">Honda</button>
+    <button onclick="car('Tata')">Tata Motors</button>
+    <button onclick="car('Ford')">Ford</button>
+    <button onclick="car('Mahindra')">Mahindra</button>
+    
+
+    <table  id="tb">
+        <tr>
+        <th>Model Name</th>
+        <th>Price</th>
+        <th>Image</th>
+        </tr>
+
+        <tbody id="cardata">
+
+        </tbody>
+    </table>
+    <script>
+        model=""
+        model1=""
+        model2=""
+        model3=""
+        function car(type){
+            hondaname=[['Honda Elevate','11.7 lakh','images/hondaelevate.webp'],
+              ['Honda City','11.8 lakh','images/hondacity.webp'],
+              ['Honda Amaze','7.29 lakh','images/hondaamaze.webp']]
+
+            tataname=[['Tata Punch','6.89 lakh','images/TataPunch.webp'],
+                  ['Tata Nexon','8.15 lakh','images/TataNexon.webp'],
+                  ['Tata Safari','16.19 lakh','images/tata.webp']]  
+                  
+            fordname=[['Ford Ecosport','7.91 lakh','images/fordecosport.webp'],
+                  ['Ford Figo','5.23 lakh','images/fordfigo.webp'],
+                  ['Ford Aspire','7.28 lakh','images/foodaspire.webp']]
+
+            mahiname=[['mahindra scorpio','13.59 lakh','images/mahiscorpio.webp'],
+                  ['Mahindra thar','11.25 lakh','images/mahithar.webp'],
+                  ['Mahindra Bolero','7.28 lakh','images/mahibolero.webp']]
+
+
+             if(type=='Honda'){
+                for(i=0;i<hondaname.length;i++){
+                  model += "<tr>"
+                    for(j=0;j<hondaname[i].length;j++){
+                        if(j==2)  {
+                           model+=`<td><img src='${hondaname[i][j]}' width='50px' height='50px'/></td>`
+                        }   
+                        else{
+                           model+=`<td>${hondaname[i][j]}</td>`
+                        } 
+                     }
+                     model+="</tr>"
+                }
+                document.getElementById('cardata').innerHTML=model
+                document.getElementById('tb').style.display='block';
+             }
+
+             else if(type=='Tata'){
+                for(i=0;i<tataname.length;i++){
+                  model1 += "<tr>"
+                    for(j=0;j<tataname[i].length;j++){
+                        if(j==2)  {
+                           model1+=`<td><img src='${tataname[i][j]}' width='50px' height='50px'/></td>`
+                        }   
+                        else{
+                           model1+=`<td>${tataname[i][j]}</td>`
+                        } 
+                     }
+                     model1 +="</tr>"
+                }
+                document.getElementById('cardata').innerHTML=model1
+                document.getElementById('tb').style.display='block';
+             }
+
+             else if(type=='Ford'){
+                for(i=0;i<fordname.length;i++){
+                  model2 += "<tr>"
+                    for(j=0;j<fordname[i].length;j++){
+                        if(j==2)  {
+                           model2+=`<td><img src='${fordname[i][j]}' width='50px' height='50px'/></td>`
+                        }   
+                        else{
+                           model2+=`<td>${fordname[i][j]}</td>`
+                        } 
+                     }
+                     model2 +="</tr>"
+                }
+                document.getElementById('cardata').innerHTML=model2
+                document.getElementById('tb').style.display='block';
+             }
+
+             else if(type=='Mahindra'){
+                for(i=0;i<mahiname.length;i++){
+                  model3 += "<tr>"
+                    for(j=0;j<mahiname[i].length;j++){
+                        if(j==2)  {
+                           model3+=`<td><img src='${mahiname[i][j]}' width='50px' height='50px'/></td>`
+                        }   
+                        else{
+                           model3+=`<td>${mahiname[i][j]}</td>`
+                        } 
+                     }
+                     model2 +="</tr>"
+                }
+                document.getElementById('cardata').innerHTML=model3
+                document.getElementById('tb').style.display='block';
+             }
+        }
+    </script>
+</body>
+</html>
