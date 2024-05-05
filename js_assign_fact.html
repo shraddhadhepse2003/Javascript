@@ -7,14 +7,14 @@
 </head>
 <body>
     <script>
-        a=[55,99,10,0,1,3,101,110,2,5,8]
-        mx=a[0]
-        for(i of a){
-            if(mx<i){        //55<55  55<99   99<10  101<110
-                mx=i         //  mx=99
-            }
+        fact=1
+        i=1
+        while(i<=10){
+            fact=fact*i
+            document.write(`fact of ${i} is ${fact} <br>`)
+            i++
         }
-        document.write(mx)
+        
     </script>
 </body>
 </html>
