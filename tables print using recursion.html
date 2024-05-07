@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function outer(i){
+            function inner(j){
+                console.log(i*j)
+                //document.write(i*j,"<br>")
+                j++
+                if(j<=10){
+                    return inner(j)
+                }
+                else{
+                    //callback function
+                    var aa=function(){
+                        alert(`table of ${i} done`)
+                    }
+                    aa()
+                }
+            }
+            inner(1)
+            i++
+            if(i<=10){
+                return outer(i)
+            }
+        }
+        outer(1)
+    </script>
+</body>
+</html>

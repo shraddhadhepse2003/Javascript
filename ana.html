@@ -10,11 +10,14 @@
     <script>
         setInterval(function(){
         t=new Date()
+        d=t.getDate()
+        //mn=t.getMonth()
+        //y=t.getfullyear()
         h=t.getHours()
         m=t.getMinutes()
         s=t.getSeconds()
         ms=t.getMilliseconds()   //1sec=1000ms
-         document.getElementById('h1').innerHTML=`${h}:${m}:${s}:${ms}`;
+         document.getElementById('h1').innerHTML=`${h}:${m}:${s}:${ms}  ${d} ${mn} `;
         },1000)
     </script>
 </body>
