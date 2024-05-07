@@ -9,16 +9,20 @@
     <script>
         function vote(){
         age=document.getElementById('tx1').value
-        if(age>=18 ){
-            document.write("you are eligible for voting")
+        nation=document.getElementById('tx2').value
+        if(age>=18 && nation=='Indian'){
+            window.alert("you are eligible for voting ")
         }
         else{
-            document.write("you are not eligible for voting")
+            window.alert("you are not eligible for voting")
         }
     }
+
+        
     </script>
 
     Enter age:<input type="text" id="tx1"/>
+    Enter nationality:<input type="text" id="tx2" />
     <button id="btn" onclick="vote()">Click</button>
 </body>
 </html>

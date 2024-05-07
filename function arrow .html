@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ar=()=>document.write("This is arrow function...<br>")
+        ar()
+
+        //arrow with default return
+        var ar1=()=>"My name is shraddha"
+        document.write(ar1()+"<br>")
+
+        //arrow function with single para
+        var ar2=n=>n
+        document.write(ar2("single parameter function")+"<br>")
+
+        //passing multiple para
+        var ar3=(a,b,c)=>a+b+c
+        document.write(ar3(1,2,3)+ "<br>")
+
+        //arrow function with curly and return
+        ar4=()=>{
+            return "return and curly works"
+        }
+        document.write(ar4())
+    </script>
+</body>
+</html>
