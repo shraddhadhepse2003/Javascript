@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         fetch(`https://api.exchangerate-api.com/v4/latest/INR`)
+         .then(re=>re.json())
+         .then(data=>{
+            d=data['rates']
+            for(i in d){
+                document.getElementById('from').innerHTML += `<option value="${i}">${i}</option>`
+                document.getElementById('to').innerHTML += `<option value="${i}">${i}</option>`
+            }
+        })
+        function Convertor(){
+            from=document.fm.from.value;
+            to=document.fm.to.value;
+            amt=parseFloat(document.fm.amt.value);
+            fetch(`https://api.exchangerate-api.com/v4/latest/${from}`)
+            .then(re=>re.json())
+            .then(data=>{
+                console.log(data['rates'][to])
+                camount=data['rates'][to]
+                document.getElementById('h1').innerHTML=camount*amt;
+            })
+        }
+    </script>
+    <form name="fm">
+        From:
+    <select name="from" id="from">
+        
+    </select><br><br>
+      To:
+      <select name="to" id="to">
+        
+    </select><br><br>
+    Amount:<input type="number" placeholder="Enter amount to convert" name="amt" />
+    
+</form>
+    <input type="submit" value="Convert" onclick="Convertor()"/>
+    <h1>Converted Amount:<span id="h1"></span></h1>
+    
+</body>
+</html>
